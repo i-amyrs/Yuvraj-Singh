@@ -1281,7 +1281,43 @@ footer {
   .menu-toggle {
     display: block;
   }
+/*prevent*/
+   html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
+* {
+    box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.hero-grid,
+.about-grid,
+.skills-grid,
+.projects-grid,
+.contact-card,
+.info-card,
+.skill-group,
+.project-card,
+.hero-card {
+    min-width: 0;
+    max-width: 100%;
+}
+body {
+    zoom: 90%;
+}
 
   /* Horizontal journey */
 
@@ -1365,7 +1401,39 @@ footer {
 
 }
 
+@media (max-width: 650px) {
 
+    .journey-track {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 5px 5px 25px;
+    }
+
+    .journey-item {
+        flex: 0 0 245px;
+        min-width: 0;
+    }
+
+    .journey-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .terminal-body {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
 /* =================================
    ACCESSIBILITY
 ================================= */
